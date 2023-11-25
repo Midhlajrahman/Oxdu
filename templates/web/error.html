@@ -1,0 +1,20 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="error ptb-100">
+<div class="container">
+<div class="error-content">
+<img data-cfsrc="{% static "web/images/oxdu-black.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img src="{% static "web/images/oxdu-black.png" %}" alt="image"></noscript>
+<h4>Sorry We Can`t Find That Page!</h4>
+<p>The page you are looking for was moved, removed, renamed or never existed.</p>
+<div class="input-group mb-3">
+<input type="text" class="form-control" placeholder="Your Email">
+<button class="btn " type="button"><i class="fas fa-search"></i></button>
+</div>
+<a class="default-button" href="{% url "index" %}">Take Me Home <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</section>
+
+{% endblock %}

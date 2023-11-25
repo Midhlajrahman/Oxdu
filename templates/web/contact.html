@@ -1,0 +1,138 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<section class="uni-banner">
+    <div class="container">
+        <div class="uni-banner-text-area">
+            <h1>Contact Us</h1>
+            <ul>
+                <li><a href="{% url "index" %}">Home</a></li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="contact ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="contact-card-area pr-20">
+                    <div class="default-section-title">
+                        <h3>If You Are Interesting To Connect With Us </h3>
+                        <p>Please give us a call, drop us an email, or fill out the contact form and we'll get back to
+                            you.</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h4><i class="fas fa-envelope"></i> Email: </h4>
+                        <a href="mailto:oxdu@gmail.com">Oxdu@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <h4><i class="fas fa-phone"></i> Call: </h4>
+                        <p><a href="tel:+91 8129313838">+91 8129313838</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Follow Us:</h4>
+                        <ul>
+                            <li><a href="https://www.facebook.com/" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.linkedin.com/" target="_blank"><i
+                                        class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><i
+                                        class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="contact-page-form-area pt-30">
+                    <form id="contactForm" method="post" class="ajax reload">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    {{form.name}}
+
+                                    {% comment %} <input type="text" class="form-control" placeholder="Full Name*" id="name" required
+                                        data-error="Please enter your name">
+                                    <div class="help-block with-errors"></div> {% endcomment %}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    {{form.email}}
+
+                                    {% comment %} <input type="email" name="email" class="form-control" placeholder="Email*"
+                                        id="email" required data-error="Please enter your Email">
+                                    <div class="help-block with-errors"></div> {% endcomment %}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    {{form.phone}}
+
+                                    {% comment %} <input type="text" name="phone_number" class="form-control"
+                                        placeholder="Phone Number*" id="phone" required
+                                        data-error="Please enter your phone number">
+                                    <div class="help-block with-errors"></div> {% endcomment %}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    {% comment %} <input type="text" name="msg_subject" class="form-control" placeholder="Subject-"
+                                        id="msg_subject" required data-error="Please enter your subject">
+                                    <div class="help-block with-errors"></div> {% endcomment %}
+                                    {{form.subject}}
+
+                                </div>
+                            </div>
+                            {% comment %} <div class="col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <input type="text" name="company_name" class="form-control"
+                                        placeholder="Company Name*" id="company_name" required
+                                        data-error="Please enter your Company Name">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div> {% endcomment %}
+                            {% comment %} <div class="col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <input type="text" name="website" class="form-control" placeholder="Website Link*"
+                                        id="website" required data-error="Please enter your Website Link">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div> {% endcomment %}
+                            <div class="col-md-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    {{form.message}}
+
+                                    {% comment %} <textarea name="message" id="message" class="form-control"
+                                        placeholder="Your Messages.." cols="30" rows="5" required
+                                        data-error="Please enter your message"></textarea>
+                                    <div class="help-block with-errors"></div> {% endcomment %}
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-12">
+                                <button class="default-button default-button-3" type="submit"><span>Send Message <i
+                                            class="fas fa-arrow-right"></i></span></button>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% comment %} <div class="google-map">
+    <iframe class="g-map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78339.6186660101!2d-106.73462151445834!3d52.15045315715413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f6bf47ed992b%3A0x5049e3295772690!2sSaskatoon%2C%20SK%2C%20Canada!5e0!3m2!1sen!2sbd!4v1629617114800!5m2!1sen!2sbd"></iframe>
+</div> {% endcomment %}
+
+{% endblock %}

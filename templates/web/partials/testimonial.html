@@ -1,0 +1,38 @@
+{% load static %}
+<section class="testimonials ptb-100">
+    <div class="container">
+    <div class="default-section-title default-section-title-middle">
+    <span>Testimonials</span>
+    <h3>Discover Our Student Openion</h3>
+    </div>
+    <div class="section-content">
+    <div class="testimonial-slider-area owl-carousel">
+        {% for t in testimonial %}
+    <div class="testimonial-card">
+    <div class="testimonial-card-text">
+    <p>“{{t.testimonial_content}}”</p>
+    <div class="testimonial-intro-area">
+    <div class="testimonial-card-intro">
+    <h4>{{t.name}}</h4>
+    <span>{{t.position}}</span>
+    </div>
+    <div class="stars">
+    <ul>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    <li><i class="fas fa-star"></i></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    {% endfor %}
+ 
+   
+   
+    </div>
+    </div>
+    </div>
+    </section>

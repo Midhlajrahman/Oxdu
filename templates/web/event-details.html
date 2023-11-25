@@ -1,0 +1,136 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+  <section class="uni-banner">
+    <div class="container">
+      <div class="uni-banner-text-area">
+        <h1>More about Events</h1>
+        <ul>
+          <li>
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li>Event Details</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="details-text-area ptb-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="blog-details-text-area">
+            {% comment %} <img class="details-main-img" data-cfsrc="{% static 'web/images/inner-images/bd1.jpg' %}" alt="image" style="display:none;visibility:hidden;" /><noscript>
+              <img class="details-main-img" src="{% static 'web/images/inner-images/bd1.jpg' %}" alt="image" />
+            </noscript> {% endcomment %}
+            <div class="bdt-text">
+              <div class="blog-date">
+                <ul>
+                  <br />
+                  <li>
+                    <i class="far fa-user-circle"></i> Conducted By <a href="posted-by.html">{{ event.event_cordinator }}</a>
+                  </li>
+                  <li>
+                    <i class="fa fa-map-marker"></i> {{ event.location }}
+                  </li>
+                </ul> <br /> <br />
+              </div>
+              <h3 class="details-page-title">{{ event.event_title }}</h3>
+              <p>{{ event.event_description }}</p>
+
+              <div class="support-list">
+                <ul>
+                  <li>
+                    <i class="fas fa-check"></i> {{ event.event_points }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="blog-text-footer mt-30 pr-20">
+            <div class="tag-area">
+              <ul>
+                <li>
+                  <span>Whatsapp:</span>
+                </li>
+                <li>
+                  <a href="www.https://wa.me/+918129313838">+918129313838</a>
+                </li>
+               
+              </ul>
+            </div>
+            <div class="social-icons">
+              <ul>
+                <li>
+                  <span>Follow Us:</span>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="blog-details-page-form-area">
+            <div class="bd-comments details-text-area pr-20"></div>
+            <div class="bd-form details-text-area pr-20" id="bd-form">
+              <h3 class="details-page-title">Secure Your Spot</h3>
+              <p>Your email address will not be published. Required fields are marked*.</p>
+              <form class="RegisterForm ajax reload" method="POST">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-6">{{form.full_name}}</div>
+                  <div class="col-md-6">{{form.email}}</div>
+                  <div class="col-md-6">{{form.contact_number}}</div>
+                  <div class="col-md-6">{{form.location}}</div>
+                  <div class="col-md-12">
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                      <label class="form-check-label" for="exampleCheck1">Save my name, email, and contact number in this browser for the next time I comment.</label>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <button class="default-button" type="submit"><span>Register <i class="fas fa-arrow-right"></i></span></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="sidebar-area pt-30 pl-20">
+                <div class="sidebar-card sidebar-category mt-30">
+                    <h3>Category</h3>
+                    <ul>
+                        <li>
+                            <a class="active" href="{% url 'event-details' pk=event.pk %}">
+                                <span>{{ event.event_title }}</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        {% for other_event in other_events %}
+                            {% if other_event.pk != event.pk %}
+                                <li>
+                                    <a href="{% url 'event-details' pk=other_event.pk %}"{% if other_event.pk == some_variable_to_identify_current_event %} class="active"{% endif %}>
+                                        <span>{{ other_event.event_title }}</span> <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </section>
+{% endblock %}

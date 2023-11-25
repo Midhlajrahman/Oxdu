@@ -1,0 +1,338 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{% static "web/css/animate.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/bootstrap.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/fontawsome.min.css" %}">
+<link rel="stylesheet" href="{% static "web/fonts/font/flaticon.css" %}">
+<link rel="stylesheet" href="{% static "web/css/meanmenu.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/owl.carousel.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/nice-select.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/owl.theme.default.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/magnific-popup.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/jquery-ui.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/odometer.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/barfiller.css" %}">
+<link rel="stylesheet" href="{% static "web/css/style.css" %}">
+<link rel="stylesheet" href="{% static "web/css/dark.css" %}">
+<link rel="stylesheet" href="{% static "web/css/responsive.css" %}">
+
+<link rel="icon" type="image/png" href="{% static "web/images/oxdu-black.png" %}">
+
+
+
+
+</head>
+<body>
+<div class="theme-switcher">
+<label id="switch" class="switch">
+<input type="checkbox" onchange="toggleTheme()" id="slider">
+<span class="slider round"></span>
+</label>
+</div>
+
+<div class="header-area header-1">
+<div class="topbar">
+<div class="container">
+<div class="topbar-content topbar-content-1 bg-071327">
+<div class="row align-items-center">
+<div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-<li><span>Our Email:</span><a href=""></a></li>"
+<div class="topbar-left-side">
+<ul>
+<li><i class="fas fa-phone"></i> <a href="tel:+029222110">Call: +918129313838</a></li>
+<li><i class="fas fa-envelope"></i> <a href="mailto:oxdu@gmail.com">Email:oxdu@gmail.com</a></li>
+
+</ul>
+</div>
+</div>
+<div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+<div class="topbar-right-area">
+<div class="language-select option-select-area">
+<i class="fas fa-globe"></i>
+<select>
+<option value="1">English</option>
+<option value="2">العربيّة</option>
+<option value="3">Dutch</option>
+<option value="4">Thai</option>
+<option value="5">简体中</option>
+</select>
+</div>
+<div class="topbar-social-icons">
+<ul>
+<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+<li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navbar-area">
+
+<div class="main-responsive-nav">
+<div class="container">
+<div class="mobile-nav">
+<a href="index.html" class="logo black-logo"><script type="text/javascript" style="display:none">
+//<![CDATA[
+window.__mirage2 = {petok:"tZ10vKm_HP02wbLeLgXQqwQWQwa7201wrtbJH.eAAmE-1800-0"};
+//]]>
+</script>
+<script type="text/javascript" src="{% static "web/ajax.cloudflare.com/cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.min.js" %}"></script>
+<img  data-cfsrc="{% static "web/images/oxdu-black.png" %}" alt="logo" style="display:none;visibility:hidden;height: 46px;" /><noscript><img src="{% static "web/images/oxdu-black.png" %}" alt="logo" /></noscript></a>
+<a href="index.html" class="logo white-logo"><img data-cfsrc="{% static "web/images/oxdu.png" %}" alt="logo" style="display:none;visibility:hidden;height: 46px;" /><noscript><img src="{% static "web/images/oxdu.png" %}" alt="logo" /></noscript></a>
+<ul class="menu-sidebar menu-small-device">
+<li><a class="default-button" href="contact.html">Get A Quote <i class="fas fa-arrow-right"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="main-nav">
+<div class="container">
+<nav class="navbar navbar-expand-md navbar-light">
+<a class="navbar-brand" href="index.html">
+<img data-cfsrc="{% static "web/images/oxdu.png" %}" alt="logo" style="display:none;visibility:hidden; width: 112px;" /><noscript><img src="{% static "web/images/oxdu.png" %}" alt="logo" style=" width: 112px;" /></noscript>
+</a>
+<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+<ul class="navbar-nav">
+<li class="nav-item ">
+<a href="{% url "index" %}" class="#">Home</a>
+</li>
+<li class="nav-item ">
+    <a href="{% url "about" %}" class="#">About</a>
+    </li>
+<li class="nav-item">
+<a href="{% url "course" %}" class="#">Course</a>
+</li>
+<li class="nav-item">
+<a href="{% url "team" %}" class="">Our Team</a>
+</li>
+<li class="nav-item">
+<a href="{% url "events" %}" class="">Events </a>
+</li>
+<li class="nav-item">
+    <a href="{% url "faq" %}" class="">FAQ</a>
+</li>
+<li class="nav-item"><a href="{% url "contact" %}" class="nav-link">Contact Us</a></li>
+</ul>
+<div class="menu-sidebar">
+<a class="default-button" href="{% url "contact" %}">Get A Quote <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="main-banner">
+<div class="main-banner-slider-area owl-carousel slider-nav">
+<div class="main-banner-single-slider">
+<div class="container">
+<div class="banner-text-area">
+<h6><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.745 0.4425C9.435 -0.1475 10.565 -0.1475 11.265 0.4425L12.845 1.8025C13.145 2.0625 13.705 2.2725 14.105 2.2725H15.805C16.865 2.2725 17.735 3.1425 17.735 4.2025V5.9025C17.735 6.2925 17.945 6.8625 18.205 7.1625L19.565 8.7425C20.155 9.4325 20.155 10.5625 19.565 11.2625L18.205 12.8425C17.945 13.1425 17.735 13.7025 17.735 14.1025V15.8025C17.735 16.8625 16.865 17.7325 15.805 17.7325H14.105C13.715 17.7325 13.145 17.9425 12.845 18.2025L11.265 19.5625C10.575 20.1525 9.445 20.1525 8.745 19.5625L7.165 18.2025C6.865 17.9425 6.305 17.7325 5.905 17.7325H4.175C3.115 17.7325 2.245 16.8625 2.245 15.8025V14.0925C2.245 13.7025 2.035 13.1425 1.785 12.8425L0.435 11.2525C-0.145 10.5625 -0.145 9.4425 0.435 8.7525L1.785 7.1625C2.035 6.8625 2.245 6.3025 2.245 5.9125V4.1925C2.245 3.1325 3.115 2.2625 4.175 2.2625H5.905C6.295 2.2625 6.865 2.0525 7.165 1.7925L8.745 0.4425Z" fill="#3f9f42"></path>
+    <path d="M6.375 9.99251L8.785 12.4125L13.615 7.57251" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+ </svg>  #1 Tech School In Kerala</h6>
+<h1>Unlock Your Career with  <span style="color:#3f9f42;"> Oxdu </span> </h1>
+<p>Oxdu Tech School: Fostering innovation and excellence in Python development, Flutter development, and digital marketing education. Join us at the forefront of technology's evolution.</p>
+<div class="banner-buttons">
+<ul>
+<li><a class="default-button" href="{% url "contact" %}">Contact Now <i class="fas fa-arrow-right"></i></a></li>
+<li><a class="default-button banner-button" href="{% url "course" %}">Explore Our Courses <i class="fas fa-arrow-right"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+{% comment %} <div class="main-banner-single-slider mbs-2">
+<div class="container">
+<div class="banner-text-area">
+<h6>We Are Digital Marketing Expert</h6>
+<h1>Stay Connected With Your Business</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp gravida. Risus commodo viverra maecenas accumsan facilisis.</p>
+<div class="banner-buttons">
+<ul>
+<li><a class="default-button" href="{% url "contact" %}">Contact Now <i class="fas fa-arrow-right"></i></a></li>
+<li><a class="default-button banner-button" href="services.html">Explore More <i class="fas fa-arrow-right"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div> {% endcomment %}
+{% comment %} <div class="main-banner-single-slider mbs-3">
+<div class="container">
+<div class="banner-text-area">
+<h6>We Are Digital Marketing Expert</h6>
+<h1>Make Your Own Startup Business Agency</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp gravida. Risus commodo viverra maecenas accumsan facilisis.</p>
+<div class="banner-buttons">
+<ul>
+<li><a class="default-button" href="{% url "contact" %}">Contact Now <i class="fas fa-arrow-right"></i></a></li>
+<li><a class="default-button banner-button" href="services.html">Explore More <i class="fas fa-arrow-right"></i></a></li>
+</ul>
+</div>
+</div>
+</div> {% endcomment %}
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+
+{% include 'web/partials/about_us.html' %}
+
+{% include  'web/partials/why_choose.html' %}
+
+{% include  'web/partials/our_team.html' %}
+
+
+
+    {% comment %} <section class="why-we why-we-1 pt-100 bg-f8f8f8">
+        <div class="shape">
+        <div class="shape-img">
+        <img data-cfsrc="{% static "web/images/shape/shape1.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img src="{% static "web/images/shape/shape1.png" %}" alt="image"></noscript>
+        </div>
+        </div>
+        <div class="container">
+        <div class="row">
+        <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12 col-12">
+        <div class="why-we-img-area">
+        <img data-cfsrc="{% static "web/images/why-we/ww2.jpg" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img src="{% static "web/images/why-we/ww2.jpg" %}" alt="image"></noscript>
+        </div>
+        </div>
+        <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
+        <div class="why-we-text-area why-we-text-area-1 pl-20">
+        <div class="default-section-title">
+        <span>Why Choose Us</span>
+        <h3>We Offer Advanced Courses</h3>
+        </div>
+        <div class="why-card-area">
+        <div class="row">
+        <div class="col-lg-10 col-md-12 col-sm-12 col-12">
+        <div class="why-we-card">
+        <h4>Python Full Stack Development</h4>
+        <p>It is advantageous when the dummy text is realistic lorem ipsum dolor.</p>
+        </div>
+        </div>
+        <div class="col-lg-10 col-md-12 col-sm-12 col-12">
+        <div class="why-we-card">
+        <h4>Flutter Development</h4>
+        <p>It is advantageous when the dummy text is realistic lorem ipsum dolor.</p>
+        </div>
+        </div>
+        <div class="col-lg-10 col-md-12 col-sm-12 col-12">
+        <div class="why-we-card">
+        <h4>Digital Marketing</h4>
+        <p>It is advantageous when the dummy text is realistic lorem ipsum dolor.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section> {% endcomment %}
+
+{% include  'web/partials/testimonial.html' %}
+  
+
+
+
+{% include 'web/partials/count.html' %}
+
+<section class="footer ptb-100 bg-071327">
+<div class="container">
+<div class="row">
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+<div class="footer-logo-area">
+<a href="{% url "index" %}"><img data-cfsrc="{% static "web/images/oxdu.png" %}" alt="image" style="display:none;visibility:hidden;  width: 122px;"><noscript><img src="{% static "web/images/oxdu.png" %}" alt="image"></noscript></a>
+<p>Oxdu Tech School: Fostering innovation and excellence in Python development, Flutter development, and digital marketing education. Join us at the forefront of technology's evolution.</p>
+<div class="footer-social-icons">
+<ul>
+<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+<li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+<div class="footer-links footer-news-area pr-20">
+<h3>Latest News</h3>
+<div class="footer-news-card mt-0">
+<p>19-August-2021</p>
+<h5><a href="blog-details.html">The Ultimate Plugin Lineup For Your WordPress Site</a></h5>
+</div>
+<div class="footer-news-card">
+<p>18-August-2021</p>
+<h5><a href="blog-details.html">The New Instagram Algorithm, And Why You Shouldn’t Panic</a></h5>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+<div class="footer-links footer-contact">
+<h3>Contact Us</h3>
+<ul>
+<li><span>Our Email:</span> <a href="mailto:oxdu@gmail.com">Oxdu@gmail.com</a></li>
+<li><span>Our Phone:</span> <a href="tel:+918129313838">+91 8129313838</a></li>
+<li><span>Opening Hours:</span> 10:00 - 4:00</li> 
+</ul>
+</div>
+</div>
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+<div class="footer-links footer-newsletter">
+<h3>Newsletter</h3>
+<p>Stay always in touch! Subscribe to our newsletter.</p>
+<form class="newsletter-form" data-toggle="validator">
+<input type="email" class="input-newsletter form-control" placeholder="Enter Your Email" name="EMAIL" required autocomplete="off">
+<div id="validator-newsletter" class="form-result"></div>
+<button class="default-button">Subscribe Now <i class="fas fa-arrow-right"></i></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<div class="copyright bg-071327">
+<div class="container">
+<p>Copyright @<script data-cfasync="false" src="{% static "web/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" %}"></script><script>document.write(new Date().getFullYear())</script>. All Rights Reserved By <a target="_blank" href="">Oxdu Tech School</a></p>
+</div>
+</div>
+
+<div class="go-top go-top-3"><i class="fas fa-chevron-up"></i></div>
+
+<script src="{% static "web/js/jquery.min.js" %}"></script>
+<script src="{% static "web/js/jquery-ui.min.js" %}"></script>
+<script src="{% static "web/js/bootstrap.bundle.min.js" %}"></script>
+<script src="{% static "web/js/meanmenu.js" %}"></script>
+<script src="{% static "web/js/owl.carousel.min.js" %}"></script>
+<script src="{% static "web/js/magnific-popup.min.js" %}"></script>
+<script src="{% static "web/js/TweenMax.js" %}"></script>
+<script src="{% static "web/js/nice-select.min.js" %}"></script>
+<script src="{% static "web/js/form-validator.min.js" %}"></script>
+<script src="{% static "web/js/contact-form-script.js" %}"></script>
+<script src="{% static "web/js/ajaxchimp.min.js" %}"></script>
+<script src="{% static "web/js/countdown.min.js" %}"></script>
+<script src="{% static "web/js/appear.min.js" %}"></script>
+<script src="{% static "web/js/barfiller.js" %}"></script>
+<script src="{% static "web/js/odometer.min.js" %}"></script>
+<script src="{% static "web/js/custom.js" %}"></script>
+</body>
+</html>

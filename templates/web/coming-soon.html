@@ -1,0 +1,55 @@
+{% extends "web/partials/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="coming-soon">
+<div class="coming-soon-overlay pt-100 pb-100">
+<div class="container">
+<div class="coming">
+<a class="c-logo" href="{% url "index" %}">
+<img class="black-logo" data-cfsrc="{% static "web/images/logo-2.png" %}" alt="logo" style="display:none;visibility:hidden;" /><noscript><img class="black-logo" src="{% static "web/images/logo-2.png" %}" alt="logo" /></noscript>
+<img class="white-logo" data-cfsrc="{% static "web/images/logo.png" %}" alt="logo" style="display:none;visibility:hidden;" /><noscript><img class="white-logo" src="{% static "web/images/logo.png" %}" alt="logo" /></noscript>
+</a>
+<h3>Get Ready To Meet With Us</h3>
+<div class="countdown-wrapper">
+<div class="row justify-content-center">
+<div class="col-lg-2 col-md-3 col-sm-6 col-6">
+<div class="getting-start" id="getting-started-d"></div>
+</div>
+<div class="col-lg-2 col-md-3 col-sm-6 col-6">
+<div class="getting-start" id="getting-started-h"></div>
+</div>
+<div class="col-lg-2 col-md-3 col-sm-6 col-6">
+<div class="getting-start" id="getting-started-m"></div>
+</div>
+<div class="col-lg-2 col-md-3 col-sm-6 col-6">
+<div class="getting-start" id="getting-started-s"></div>
+</div>
+</div>
+</div>
+<form class="newsletter-form" data-toggle="validator">
+<div class="row ">
+<div class="col-md-8 col-sm-7 col-12">
+<input type="email" class="input-newsletter form-control" placeholder="Enter Your Email" name="EMAIL" required autocomplete="off">
+<div id="validator-newsletter1" class="form-result"></div>
+</div>
+<div class="col-md-4 col-sm-5 col-12">
+<button class="default-button">Subscribe Now <i class="fas fa-arrow-right"></i></button>
+</div>
+</div>
+</form>
+<p>We are working very hard on the new version of our site. <br> It will bring a lot of new features. Stay tuned!</p>
+<div class="social-icons">
+<ul>
+<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+<li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

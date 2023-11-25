@@ -1,0 +1,71 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="uni-banner">
+<div class="container">
+<div class="uni-banner-text-area">
+<h1>My Account</h1>
+<ul>
+<li><a href="{% url "index" %}">Home</a></li>
+<li>Account</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<div class="login ptb-100">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-12 col-sm-12 col-12">
+<div class="default-section-title">
+<h3>Login</h3>
+</div>
+<div class="login-form pr-20">
+<form>
+<div class="mb-3">
+<label for="exampleInputEmail1" class="form-label">User Name or Email address*</label>
+<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+</div>
+<div class="mb-3">
+<label for="exampleInputPassword1" class="form-label">Password*</label>
+<input type="password" class="form-control" id="exampleInputPassword1" required>
+</div>
+<div class="mb-3 form-check">
+<input type="checkbox" class="form-check-input" id="exampleCheck1">
+<label class="form-check-label" for="exampleCheck1">Remember Me</label>
+</div>
+<button type="submit" class="default-button default-button-3"><span>Log In</span></button>
+</form>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 col-sm-12 col-12">
+<div class="default-section-title pt-30">
+<h3>Register</h3>
+</div>
+<div class="login-form">
+<form>
+<div class="mb-3">
+<label for="exampleInputUsername" class="form-label">User Name*</label>
+<input type="Text" class="form-control" id="exampleInputUsername" required>
+</div>
+<div class="mb-3">
+<label for="exampleInputEmail" class="form-label">Email address*</label>
+<input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" required>
+</div>
+<div class="mb-3">
+<label for="exampleInputPassword" class="form-label">Password*</label>
+<input type="password" class="form-control" id="exampleInputPassword" required>
+</div>
+<p>The password should be at least eight characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ & )</p>
+<button type="submit" class="default-button default-button-3"><span>Register</span></button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

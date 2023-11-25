@@ -1,0 +1,48 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<section class="uni-banner">
+<div class="container">
+<div class="uni-banner-text-area">
+<h1>Upcomming Events</h1>
+<ul>
+<li><a href="{% url "index" %}">Home</a></li>
+<li>Events</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section class="blog pt-70 pb-100">
+<div class="container">
+<div class="row justify-content-center">
+    {% for e in event  %}
+<div class="col-lg-4 col-md-6 col-sm-12 col-12">
+<div class="blog-card blog-card-2">
+<div class="blog-img-area">
+<a href="{% url "event-details" e.pk %}"><img data-cfsrc="{{e.event_image.url}}" alt="image" style="display:none;visibility:hidden;"><noscript><img src="{{e.event_image.url}}" alt="image"></noscript></a>
+<div class="blog-img-date">
+<span>{{e.event_date}}</span>
+<span>{{e.event_month}}</span>
+</div>
+</div>
+<div class="blog-text-area">
+<div class="blog-date">
+<ul>
+<li><i class="far fa-user-circle"></i> Conducted By <a href="posted-by.html">{{e.event_cordinator}}</a> </li>
+<li><i class="fa fa-map-marker"></i>{{e.location}}</li>
+
+</ul>
+</div>
+<h4><a href="{% url "event-details" e.pk %}">{{e.event_title}}</a></h4>
+<a class="default-button default-button-2" href="{% url "event-details" e.pk %}">Read More <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</div>
+{% endfor %}
+</section>
+
+{% endblock %}

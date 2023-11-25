@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static "web/css/animate.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/bootstrap.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/fontawsome.min.css" %}">
+<link rel="stylesheet" href="{% static "web/fonts/font/flaticon.css" %}">
+<link rel="stylesheet" href="{% static "web/css/meanmenu.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/owl.carousel.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/nice-select.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/owl.theme.default.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/magnific-popup.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/jquery-ui.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/odometer.min.css" %}">
+<link rel="stylesheet" href="{% static "web/css/barfiller.css" %}">
+<link rel="stylesheet" href="{% static "web/css/style.css" %}">
+<link rel="stylesheet" href="{% static "web/css/dark.css" %}">
+<link rel="stylesheet" href="{% static "web/css/responsive.css" %}">
+<title>Oxdu</title>
+<link rel="icon" type="image/png" href="{% static "web/images/oxdu-black.png" %}" style="width: 20px;">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.15.3/dist/sweetalert2.all.min.js"></script>
+
+</head>
+<body>
+<div class="theme-switcher">
+<label id="switch" class="switch">
+<input type="checkbox" onchange="toggleTheme()" id="slider">
+<span class="slider round"></span>
+</label>
+</div>
+<div class="header-area header-area-2">
+<div class="navbar-area">
+<div class="main-responsive-nav">
+<div class="container">
+<div class="mobile-nav">
+<a href="{% url "index" %}" class="logo black-logo"><script type="text/javascript" style="display:none">
+//<![CDATA[
+window.__mirage2 = {petok:"tZ10vKm_HP02wbLeLgXQqwQWQwa7201wrtbJH.eAAmE-1800-0"};
+//]]>
+</script>
+<script type="text/javascript" src="{% static "web/ajax.cloudflare.com/cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.min.js" %}"></script>
+<img data-cfsrc="{% static "web/images/oxdu-black.png" %}" alt="logo" style="display:none;visibility:hidden;  width: 112px;" /><noscript><img src="{% static "web/images/oxdu-black.png" %}" alt="logo" style=" width: 112px;"/></noscript></a>
+<a href="index.html" class="logo white-logo"><img data-cfsrc="{% static "web/images/oxdu.png" %}" alt="logo" style="display:none;visibility:hidden;  width: 122px;" /><noscript><img src="{% static "web/images/small-logo.png" %}" alt="logo" style=" width: 122px;"/></noscript></a>
+<ul class="menu-sidebar menu-small-device">
+<li><a class="default-button" href="{% url "contact" %}">Get A Quote <i class="fas fa-arrow-right"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="main-nav">
+<div class="container">
+<nav class="navbar navbar-expand-md navbar-light">
+<a class="navbar-brand" href="index.html">
+<img class="black-logo" data-cfsrc="{% static "web/images/oxdu-black.png" alt="logo" %}" style="display:none;visibility:hidden; width: 112px;" /><noscript><img class="black-logo" src="{% static "web/images/oxdu-black.png" %}" alt="logo" /></noscript>
+<img class="white-logo" data-cfsrc="{% static "web/images/oxdu.png" %}" alt="logo" style="display:none;visibility:hidden; width: 112px;" /><noscript><img class="white-logo" src="{% static "web/images/oxdu.png" %}" alt="logo" /></noscript>
+</a>
+<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+<ul class="navbar-nav">
+<li class="nav-item ">
+<a href="{% url "index" %}" class="">Home </a>
+</li>
+<li class="nav-item ">
+    <a href="{% url "about" %}" class="#">About</a>
+</li>
+<li class="nav-item">
+<a href="{% url "course" %}" class="">Course</a>
+</li>
+
+<li class="nav-item">
+<a href="{% url "events" %}" class="">Events </a>
+</li>
+<li class="nav-item">
+    <a href="{% url "faq" %}" class="">FAQ</a>
+</li>
+<li class="nav-item"><a href="{% url "contact" %}" class="nav-link">Contact Us</a></li>
+</ul>
+<div class="menu-sidebar">
+<a class="default-button" href="{% url "contact" %}">Get A Quote <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+{% block content %}
+{% endblock  %}
+
+{% include 'web/partials/count.html' %}
+    
+    
+    <section class="footer ptb-100 bg-071327">
+    <div class="container">
+    <div class="row">
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+    <div class="footer-logo-area">
+    <a href="{% url "index" %}"><img data-cfsrc="{% static "web/images/oxdu.png" %}" alt="image" style="display:none;visibility:hidden;  width: 122px;"><noscript><img src="{% static "web/images/oxdu.png" %}" alt="image"></noscript></a>
+    <p>Oxdu Tech School: Fostering innovation and excellence in Python development, Flutter development, and digital marketing education. Join us at the forefront of technology's evolution.</p>
+    <div class="footer-social-icons">
+    <ul>
+    <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+    <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+    <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+    <div class="footer-links footer-news-area pr-20">
+    <h3>Latest News</h3>
+    <div class="footer-news-card mt-0">
+    <p>19-August-2021</p>
+    <h5><a href="blog-details.html">The Ultimate Plugin Lineup For Your WordPress Site</a></h5>
+    </div>
+    <div class="footer-news-card">
+    <p>18-August-2021</p>
+    <h5><a href="blog-details.html">The New Instagram Algorithm, And Why You Shouldn’t Panic</a></h5>
+    </div>
+    </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+    <div class="footer-links footer-contact">
+    <h3>Contact Us</h3>
+    <ul>
+    <li><span>Our Email:</span> <a href="mailto:oxdu@gmail.com">Oxdu@gmail.com</a></li>
+    <li><span>Our Phone:</span> <a href="tel:+918129313838">+91 8129313838</a></li>
+    <li><span>Opening Hours:</span> 10:00 - 4:00</li> 
+    </ul>
+    </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+    <div class="footer-links footer-newsletter">
+    <h3>Newsletter</h3>
+    <p>Stay always in touch! Subscribe to our newsletter.</p>
+    <form class="newsletter-form" data-toggle="validator">
+    <input type="email" class="input-newsletter form-control" placeholder="Enter Your Email" name="EMAIL" required autocomplete="off">
+    <div id="validator-newsletter" class="form-result"></div>
+    <button class="default-button">Subscribe Now <i class="fas fa-arrow-right"></i></button>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    <div class="copyright bg-071327">
+    <div class="container">
+    <p>Copyright @<script data-cfasync="false" src="{% static "web/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" %}"></script><script>document.write(new Date().getFullYear())</script>. All Rights Reserved By <a target="_blank" href="">Oxdu Tech School</a></p>
+    </div>
+    </div>
+    
+    <div class="go-top go-top-3"><i class="fas fa-chevron-up"></i></div>
+    
+    <script src="{% static "web/js/jquery.min.js" %}"></script>
+    <script src="{% static "web/js/jquery-ui.min.js" %}"></script>
+    <script src="{% static "web/js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "web/js/meanmenu.js" %}"></script>
+    <script src="{% static "web/js/owl.carousel.min.js" %}"></script>
+    <script src="{% static "web/js/magnific-popup.min.js" %}"></script>
+    <script src="{% static "web/js/TweenMax.js" %}"></script>
+    <script src="{% static "web/js/nice-select.min.js" %}"></script>
+    <script src="{% static "web/js/form-validator.min.js" %}"></script>
+    <script src="{% static "web/js/contact-form-script.js" %}"></script>
+    <script src="{% static "web/js/ajaxchimp.min.js" %}"></script>
+    <script src="{% static "web/js/countdown.min.js" %}"></script>
+    <script src="{% static "web/js/appear.min.js" %}"></script>
+    <script src="{% static "web/js/barfiller.js" %}"></script>
+    <script src="{% static "web/js/odometer.min.js" %}"></script>
+    <script src="{% static "web/js/custom.js" %}"></script>
+    <script src="{% static "web/js/ajax.js" %}"></script>
+
+    </body>
+    </html>

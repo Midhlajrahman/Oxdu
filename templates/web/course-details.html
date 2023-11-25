@@ -1,0 +1,116 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<section class="uni-banner">
+<div class="container">
+<div class="uni-banner-text-area">
+<h1>More About Course</h1>
+<ul>
+<li><a href="{% url 'index' %}">Home</a></li>
+<li>Course Details</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section class="details-text-area ptb-100">
+<div class="container">
+<div class="row">
+<div class="col-lg-8">
+<div class="blog-details-text-area">
+{% comment %} <img class="details-main-img" data-cfsrc="{{course.c}}" alt="image" style="display:none;visibility:hidden;"><noscript><img class="details-main-img" src="{% static 'web/images/inner-images/bd1.jpg' %}" alt="image"></noscript> {% endcomment %}
+<div class="bdt-text">
+<br> <br> <br> <br>
+<h3 class="details-page-title">{{course.course_name}}</h3>
+<p>{{course.course_description}}</p>
+<h3 class="details-page-title">Course Feature</h3>
+<div class="support-list">
+
+<!-- ... (previous HTML code) -->
+
+
+<div class="support-list">
+    <ul>
+        {% for feature in features %}
+            <li><i class="fas fa-check"></i> {{ feature.course_feature }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- ... (remaining HTML code) -->
+
+</div>
+</div>
+</div>
+<div class="blog-text-footer mt-30 pr-20">
+<div class="tag-area">
+<ul>
+<li><span>WhatsApp:</span> </li>
+<li><a href="https://wa.me/+918129313838">+91 8129313838</a></li>
+
+</ul>
+</div>
+<div class="social-icons">
+<ul>
+<li><span>Follow Us:</span></li>
+<li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+<li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="blog-details-page-form-area">
+
+<div class="bd-form details-text-area pr-20" id="bd-form">
+<h3 class="details-page-title">Registration Form</h3>
+<p>Your email address will not be published. Required fields are marked*.</p>
+<form class="ajax reload" method="POST">
+    {% csrf_token %}
+<div class="row">
+<div class="col-md-6">
+    {{form.name}}
+</div>
+<div class="col-md-6">
+    {{form.email}}
+</div>
+<div class="col-md-6">
+    {{form.phone}}
+</div>
+<div class="col-md-6">
+<input type="text" class="form-control" placeholder="{{course.course_name}}" required readonly>
+</div>
+
+<div class="col-md-12">
+    <button class="default-button" type="submit"><span>Submit <i class="fas fa-arrow-right"></i></span></button>
+  </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="sidebar-area pt-30 pl-20">
+
+<div class="sidebar-card sidebar-category mt-30">
+<h3>Category</h3>
+<ul>
+<li><a class="active" href="blog-details.html"><span>Advanced Media Analytics</span> <i class="fas fa-arrow-right"></i></a></li>
+<li><a href="blog-details.html"><span>Web Development</span> <i class="fas fa-arrow-right"></i></a></li>
+<li><a href="blog-details.html"><span>Organic Long Term SEO</span> <i class="fas fa-arrow-right"></i></a></li>
+<li><a href="blog-details.html"><span>Digital Marketing</span> <i class="fas fa-arrow-right"></i></a></li>
+<li><a href="blog-details.html"><span>Management For Business</span> <i class="fas fa-arrow-right"></i></a></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<section class="uni-banner">
+<div class="container">
+<div class="uni-banner-text-area">
+<h1>Our Offline Courses</h1>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li>Courses</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section class="pricing pt-70 pb-100">
+<div class="container">
+<div class="row">
+
+{% for c in courses %}
+<div class="col-lg-4 col-md-6 col-sm-12 col-12">
+<div class="pricing-card">
+<span>{{c.duration}}<sub> months</sub></span>
+<h5>{{c.fees}} <sub> per month</sub></h5>
+<br>
+<center>
+<h2>{{c.course_name}}</h2>
+</center>
+<br>
+{% comment %} <p>$349 Billed Annually</p>
+<p>Frequently generate Bootstrap websites for clients? Pick this plan.</p> {% endcomment %}
+<ul>
+    {% for feature in c.coursefeatures_set.all %}
+      <li><i class="far fa-check-circle"></i> {{ feature.course_feature }}</li>
+    {% endfor %}
+  </ul>
+  
+<a class="default-button default-button-2" href="{% url "course_details" c.pk %}"> More About Course <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+</section>
+
+{% endblock %}
