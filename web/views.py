@@ -196,8 +196,14 @@ def course(request):
 
 
 def course_details(request, pk):
+    # Get the selected course
     course = get_object_or_404(Course, pk=pk)
+
+    # Get features for the selected course
     features = CourseFeatures.objects.filter(course=course)
+
+    # Get other courses (excluding the selected one)
+    other_courses = Course.objects.exclude(pk=pk)
 
     form = RegisterationForm(request.POST or None)
 
@@ -230,6 +236,7 @@ def course_details(request, pk):
         'course': course,
         'form': form,
         'features': features,
+        'other_courses': other_courses,  # Add this to your context
     }
 
     return render(request, 'web/course-details.html', context)

@@ -94,17 +94,24 @@
 </div>
 <div class="col-lg-4">
 <div class="sidebar-area pt-30 pl-20">
-
-<div class="sidebar-card sidebar-category mt-30">
-<h3>Category</h3>
-<ul>
-<li><a class="active" href="blog-details.html"><span>Advanced Media Analytics</span> <i class="fas fa-arrow-right"></i></a></li>
-<li><a href="blog-details.html"><span>Web Development</span> <i class="fas fa-arrow-right"></i></a></li>
-<li><a href="blog-details.html"><span>Organic Long Term SEO</span> <i class="fas fa-arrow-right"></i></a></li>
-<li><a href="blog-details.html"><span>Digital Marketing</span> <i class="fas fa-arrow-right"></i></a></li>
-<li><a href="blog-details.html"><span>Management For Business</span> <i class="fas fa-arrow-right"></i></a></li>
-</ul>
-</div>
+    <div class="sidebar-card sidebar-category mt-30">
+        <h3>Other Courses</h3>
+        <ul>
+            <li>
+                <a class="active" href="{% url 'course_details' pk=course.pk %}">
+                    <span>{{ course.course_name }}</span> <i class="fas fa-arrow-right"></i>
+                </a>
+            </li>
+            {% for other_course in other_courses %}
+                <li>
+                    <a href="{% url 'course_details' pk=other_course.pk %}"{% if other_course.pk == course.pk %} class="active"{% endif %}>
+                        <span>{{ other_course.course_name }}</span> <i class="fas fa-arrow-right"></i>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
 
 </div>
 </div>
