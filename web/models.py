@@ -50,12 +50,14 @@ class Event(models.Model):
     location = models.CharField(max_length=100)
     event_title = models.CharField(max_length=100)
     event_description = models.TextField()
-    event_points =  models.CharField(max_length=100)
     slug = models.SlugField(unique=True , max_length=100)
     
     def __str__(self):
         return self.event_title
-    
+  
+class EventPoints(models.Model):
+    event=models.ForeignKey("web.Event" , on_delete=models.CASCADE,blank=True,null=True)
+    event_points =  models.CharField(max_length=100, blank=True,null=True)
 
 class Faq(models.Model):
     faq_question = models.CharField(max_length=300)
@@ -91,5 +93,4 @@ class CourseRegistration(models.Model):
     
     def __str__(self):
         return self.name
-    
     

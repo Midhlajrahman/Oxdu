@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Contact, Course, CourseFeatures, OurFacualty , Event , Faq , Testimonial ,Register , CourseRegistration
+from .models import Contact, Course, CourseFeatures, OurFacualty , Event , Faq , Testimonial ,Register , CourseRegistration , EventPoints
 
 
 @admin.register(Contact)
@@ -30,11 +30,19 @@ class CourseAdmin(admin.ModelAdmin):
 @admin.register(OurFacualty)
 class OurFacualtyAdmin(admin.ModelAdmin):
     list_display =( "facualty_name" , "facualty_position" , "facualty_image" , "instagram" , "linkedin" , "twitter")
-    
+
+
+
+class EventsPointsInline(admin.TabularInline):
+    model = EventPoints
+    fields = ('event_points',)  # Corrected the fields attribute
+    extra = 1
+        
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ("event_title" , "location" , "event_cordinator" , "event_month" , "event_date" , "event_image" , "event_description" , "event_points")
+    list_display = ("event_title" , "location" , "event_cordinator" , "event_month" , "event_date" , "event_image" , "event_description" )
+    inlines = [EventsPointsInline]
     
     
 @admin.register(Faq)
@@ -45,4 +53,5 @@ class FaqAdmin(admin.ModelAdmin):
 @admin.register(Testimonial)
 class TestimonialAdmin(admin.ModelAdmin):
     list_display = (  "name" , "testimonial_content"  , "position")
+    
     

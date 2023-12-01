@@ -40,9 +40,11 @@
 
               <div class="support-list">
                 <ul>
+                  {% for event in event_points.all %}
                   <li>
                     <i class="fas fa-check"></i> {{ event.event_points }}
                   </li>
+                  {% endfor %}
                 </ul>
               </div>
             </div>
@@ -91,6 +93,9 @@
                   <div class="col-md-6">{{form.email}}</div>
                   <div class="col-md-6">{{form.contact_number}}</div>
                   <div class="col-md-6">{{form.location}}</div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="{{event.event_title}}" required readonly>
+                    </div>
                   <div class="col-md-12">
                     <div class="mb-3 form-check">
                       <input type="checkbox" class="form-check-input" id="exampleCheck1" />

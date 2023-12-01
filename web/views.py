@@ -1,8 +1,9 @@
 from __future__ import unicode_literals
 from django.shortcuts import get_object_or_404, redirect, render 
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Course , OurFacualty , Event , Faq , Testimonial 
+from .models import Course , OurFacualty , Event , Faq , Testimonial,EventPoints
 
 import json
 from .forms import ContactForm ,RegisterForm ,RegisterationForm
@@ -151,37 +152,46 @@ def events(request):
 
 
 def event_details(request, pk):
-    event = Event.objects.get(pk=pk)
+    # Retrieve the Event instance first
+    event = get_object_or_404(Event, pk=pk)
+    
+    # Now you can use the 'event' variable
+    event_points = EventPoints.objects.filter(event=event)
+
     form = RegisterForm(request.POST or None)
 
     if request.method == "POST":
+        print(request.POST)  # Add this line to inspect the POST data
+
         if form.is_valid():
-            form.save()
+            registration = form.save(commit=False)
+            registration.event = event
+            registration.save()
+
             response_data = {
                 "status": "true",
                 "title": "Successfully Registered",
                 "message": "Your Seat successfully Secured",
             }
+            return JsonResponse(response_data)
         else:
             print(form.errors)
             response_data = {
                 "status": "false",
                 "title": "Form validation error",
             }
-        return HttpResponse(
-            json.dumps(response_data), content_type="application/javascript"
-        )
+            return JsonResponse(response_data)
     else:
         # Move the assignment of other_events above the context
         other_events = Event.objects.exclude(pk=pk)
         context = {
             'event': event,
             'form': form,
-            'other_events': other_events
+            'other_events': other_events,
+            'event_points': event_points
         }
 
     return render(request, 'web/event-details.html', context)
-
 
 
 def course(request):
