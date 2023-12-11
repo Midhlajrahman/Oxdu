@@ -1,62 +1,18 @@
 {% extends "web/base.html" %}
 {% load static %}
+
 {% block content %}
+  <section class="uni-banner">
+    <div class="container">
+      <div class="uni-banner-text-area">
+        <h1>Our Exceptional Team Members</h1>
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li>Our team</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-
-
-
-<section class="uni-banner">
-<div class="container">
-<div class="uni-banner-text-area">
-<h1>Our Exceptional Team Members</h1>
-<ul>
-<li><a href="{% url "index" %}">Home</a></li>
-<li>Our team</li>
-</ul>
-</div>
-</div>
-</section>
-
-{% include  'web/partials/our_team.html' %}
-
-
-
-
-
-
-
-</div>
-</div>
-</section>
-
-
-
-
-{% comment %} <section class="partner">
-<div class="container">
-<div class="partner-slider-area owl-carousel">
-<div class="brand-logo">
-<img class="white-theme-p" data-cfsrc="{% static "web/images/brand/br1.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img class="white-theme-p" src="{% static "web/images/brand/br1.png" %}" alt="image"></noscript>
-<img class="dark-theme-p" data-cfsrc="{% static "web/images/brand/br1-2.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img class="dark-theme-p" src="{% static "web/images/brand/br1-2.png" %}" alt="image"></noscript>
-</div>
-<div class="brand-logo">
-<img class="white-theme-p" data-cfsrc="{% static "web/images/brand/br2.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img class="white-theme-p" src="{% static "web/images/brand/br2.png" %}" alt="image"></noscript>
-<img class="dark-theme-p" data-cfsrc="{% static "web/images/brand/br2-2.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img class="dark-theme-p" src="{% static "web/images/brand/br2-2.png" %}" alt="image"></noscript>
-</div>
-<div class="brand-logo">
-<img class="white-theme-p" data-cfsrc="{% static "web/images/brand/br3.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img class="white-theme-p" src="{% static "web/images/brand/br3.png" %}" alt="image"></noscript>
-<img class="dark-theme-p" data-cfsrc="{% static "web/images/brand/br3-2.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img class="dark-theme-p" src="{% static "web/images/brand/br3-2.png" %}" alt="image"></noscript>
-</div>
-<div class="brand-logo">
-<img class="white-theme-p" data-cfsrc="{% static "web/images/brand/br4.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img class="white-theme-p" src="{% static "web/images/brand/br4.png" %}" alt="image"></noscript>
-<img class="dark-theme-p" data-cfsrc="{% static "web/images/brand/br4-2.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img class="dark-theme-p" src="{% static "web/images/brand/br4-2.png" %}" alt="image"></noscript>
-</div>
-<div class="brand-logo">
-<img class="white-theme-p" data-cfsrc="{% static "web/images/brand/br5.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img class="white-theme-p" src="{% static "web/images/brand/br5.png" %}" alt="image"></noscript>
-<img class="dark-theme-p" data-cfsrc="{% static "web/images/brand/br5-2.png" %}" alt="image" style="display:none;visibility:hidden;"><noscript><img class="dark-theme-p" src="{% static "web/images/brand/br5-2.png" %}" alt="image"></noscript>
-</div>
-</div>
-</div>
-</section> {% endcomment %}
-
+  {% include 'web/partials/our_team.html' %}
 {% endblock %}
