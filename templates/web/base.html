@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="{% static "web/css/dark.css" %}">
 <link rel="stylesheet" href="{% static "web/css/responsive.css" %}">
 <title>Oxdu</title>
-<link rel="icon" type="image/png" href="{% static "web/images/oxdu-black.png" %}" style="width: 20px;">
+<link rel="icon" type="image/png" href="{% static "web/images/fevico.png" %}" style="height: 10px;">
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.15.3/dist/sweetalert2.all.min.js"></script>
 
 </head>
@@ -69,7 +69,9 @@ window.__mirage2 = {petok:"tZ10vKm_HP02wbLeLgXQqwQWQwa7201wrtbJH.eAAmE-1800-0"};
 <li class="nav-item">
 <a href="{% url "course" %}" class="">Course</a>
 </li>
-
+<li class="nav-item">
+    <a href="{% url "team" %}" class="">Our Team</a>
+    </li>
 <li class="nav-item">
 <a href="{% url "events" %}" class="">Events </a>
 </li>
@@ -98,7 +100,7 @@ window.__mirage2 = {petok:"tZ10vKm_HP02wbLeLgXQqwQWQwa7201wrtbJH.eAAmE-1800-0"};
     <div class="row">
     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
     <div class="footer-logo-area">
-    <a href="{% url "index" %}"><img data-cfsrc="{% static "web/images/oxdu.png" %}" alt="image" style="display:none;visibility:hidden;  width: 122px;"><noscript><img src="{% static "web/images/oxdu.png" %}" alt="image"></noscript></a>
+    <a href="{% url "index" %}"><img data-cfsrc="{% static "web/images/oxdu.png" %}" alt="image" style="display:none;visibility:hidden;  width: 122px;  padding-top: 27px;"><noscript><img src="{% static "web/images/oxdu.png" %}" alt="image"></noscript></a>
     <p>Oxdu Tech School: Fostering innovation and excellence in Python development, Flutter development, and digital marketing education. Join us at the forefront of technology's evolution.</p>
     <div class="footer-social-icons">
     <ul>
@@ -111,25 +113,23 @@ window.__mirage2 = {petok:"tZ10vKm_HP02wbLeLgXQqwQWQwa7201wrtbJH.eAAmE-1800-0"};
     </div>
     </div>
     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
-    <div class="footer-links footer-news-area pr-20">
-    <h3>Latest News</h3>
-    <div class="footer-news-card mt-0">
-    <p>19-August-2021</p>
-    <h5><a href="blog-details.html">The Ultimate Plugin Lineup For Your WordPress Site</a></h5>
-    </div>
-    <div class="footer-news-card">
-    <p>18-August-2021</p>
-    <h5><a href="blog-details.html">The New Instagram Algorithm, And Why You Shouldn’t Panic</a></h5>
-    </div>
-    </div>
-    </div>
+        <div class="footer-links footer-news-area pr-20">
+        <h3>Upcoming Events</h3>
+        {% for event in events %}
+        <div class="footer-news-card mt-0">
+        {% comment %} <p>{{event.location}}</p> {% endcomment %}
+        <h5><a href="{% url "event-details" event.pk %}">{{ event.event_title }}</a></h5>
+        </div>
+        {% endfor %}
+        </div>
+        </div>
     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
     <div class="footer-links footer-contact">
     <h3>Contact Us</h3>
     <ul>
-    <li><span>Our Email:</span> <a href="mailto:oxdu@gmail.com">Oxdu@gmail.com</a></li>
-    <li><span>Our Phone:</span> <a href="tel:+918129313838">+91 8129313838</a></li>
-    <li><span>Opening Hours:</span> 10:00 - 4:00</li> 
+    <li><span>Our Email :</span> <a href="mailto:oxdu@gmail.com">Oxdu@gmail.com</a></li>
+    <li><span>Our Phone :</span> <a href="tel:+919037126305">+91 9037126305</a></li>
+    <li><span>Opening   :</span> 10:00 - 4:00</li> 
     </ul>
     </div>
     </div>
@@ -174,6 +174,5 @@ window.__mirage2 = {petok:"tZ10vKm_HP02wbLeLgXQqwQWQwa7201wrtbJH.eAAmE-1800-0"};
     <script src="{% static "web/js/odometer.min.js" %}"></script>
     <script src="{% static "web/js/custom.js" %}"></script>
     <script src="{% static "web/js/ajax.js" %}"></script>
-
     </body>
     </html>

@@ -65,7 +65,7 @@ class EventPoints(models.Model):
     event = models.ForeignKey(
         "web.Event", on_delete=models.CASCADE, blank=True, null=True
     )
-    event_points = models.CharField(max_length=100, blank=True, null=True)
+    event_points = models.CharField(max_length=500, blank=True, null=True)
 
 
 class Faq(models.Model):

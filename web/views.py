@@ -9,9 +9,11 @@ from .forms import ContactForm, RegisterationForm, RegisterForm
 from .models import (Course, CourseFeatures, Event, EventPoints, Faq,
                      OurFacualty, Testimonial)
 
-
 def index(request):
     form = ContactForm(request.POST or None)
+    courses = Course.objects.all()
+    events = Event.objects.all()  # Fetch all events from the database
+
     if request.method == "POST":
         if form.is_valid():
             form.save()
@@ -30,15 +32,10 @@ def index(request):
                 json.dumps(response_data), content_type="application/javascript"
             )
     else:
-        context = {
-            "is_contact": True,
-            "form": form,
-        }
-
-    facualty = OurFacualty.objects.all()
-    testimonial = Testimonial.objects.all()
-    context = {"facualty": facualty, "testimonial": testimonial}
-    return render(request, "web/index.html", context)
+        facualty = OurFacualty.objects.all()
+        testimonial = Testimonial.objects.all()
+        context = {"facualty": facualty, "testimonial": testimonial, "courses": courses, "events": events}
+        return render(request, "web/index.html", context)
 
 
 def about(request):
