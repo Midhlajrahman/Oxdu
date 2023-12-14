@@ -22,7 +22,7 @@ Connect with us effortlessly through a user-friendly contact form. We value your
 ### 5. Social Media Integration:
 Stay connected with us on various social media platforms. Our dynamic links provide real-time updates and facilitate interaction with the broader community.
 
-## 🌐 Technologies Used:![oxdu_faculty](https://github.com/Midhlajrahman/Oxdu/assets/130483805/eda35d35-7aae-402f-828d-f1895235e72b)
+## 🌐 Technologies Used:
 
 
 - **HTML, CSS, JavaScript:**
@@ -45,6 +45,7 @@ Feel free to explore, engage, and provide your valuable insights as we strive to
 ![oxdu_about](https://github.com/Midhlajrahman/Oxdu/assets/130483805/7312e3c6-8971-49d1-a5d6-2e010968365e)
 ![oxdu_course](https://github.com/Midhlajrahman/Oxdu/assets/130483805/19bcd4b5-de07-46f5-9a89-1b4e4b1b71c2)
 ![oxdu_course_details](https://github.com/Midhlajrahman/Oxdu/assets/130483805/5f7e3dca-9d13-4f90-808f-b9290bdabba3)
+![oxdu_faculty](https://github.com/Midhlajrahman/Oxdu/assets/130483805/eda35d35-7aae-402f-828d-f1895235e72b)
 ![oxdu_events](https://github.com/Midhlajrahman/Oxdu/assets/130483805/19d81ffe-29d6-489f-98cb-9a1c98012a8a)
 ![oxdu_events_details](https://github.com/Midhlajrahman/Oxdu/assets/130483805/7a80e60b-1422-43df-8346-f0a05e2336cc)
 ![oxdu_faq](https://github.com/Midhlajrahman/Oxdu/assets/130483805/d74a8b38-0e2c-48cc-9f6e-51e79f26fb0b)
